@@ -1,0 +1,91 @@
+<hoja de vida html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valeria Franco | Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">VF</div>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <img src="1.jpeg" alt="Valeria Franco" class="profile-img">
+                <h1>Valeria Franco</h1>
+                <p class="tagline">Estudiante de 10° grado | Atleta de Voleibol | Futura Bióloga</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <h2>Sobre mí</h2>
+            <div class="card">
+                <p>Soy una estudiante de décimo grado apasionada por el <strong>voleibol</strong> y la <strong>biología</strong>. Me destaco por mi rapidez, constancia y gran memoria. Mi meta es aprender idiomas y entrar a la universidad.</p>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <h2>Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <span>Voleibol (Rapidez)</span>
+                    <div class="bar"><div class="progress" style="width: 95%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <span>Biología</span>
+                    <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-card">
+                    <span>Retentiva</span>
+                    <div class="bar"><div class="progress" style="width: 98%;"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <h2>Proyectos y Metas</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="3.jpg" alt="Graduación">
+                    <div class="p-content"><h3>Graduación</h3><p>Culminar el bachillerato con honores.</p></div>
+                </article>
+                <article class="project-card">
+                    <img src="2.jpg" alt="Voleibol">
+                    <div class="p-content"><h3>Campeona</h3><p>Disciplina y liderazgo en el equipo.</p></div>
+                </article>
+                <article class="project-card">
+                    <img src="4.jpg" alt="Idiomas">
+                    <div class="p-content"><h3>Idiomas</h3><p>Preparación para un futuro global.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container section-padding">
+            <h2>Contacto</h2>
+            <div class="contact-flex">
+                <form id="contact-form">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Correo" required>
+                    <textarea placeholder="Tu Mensaje" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar</button>
+                    <p id="form-message" class="hidden">¡Gracias por contactarme!</p>
+                </form>
+                <div class="socials">
+                    <p><strong>Tel:</strong> 312578 9563</p>
+                    <p><strong>Instagram:</strong> @vale21</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>&copy; 2024 Valeria Franco</p></footer>
+    <script src="script.js"></script>
+</body>
+</html>

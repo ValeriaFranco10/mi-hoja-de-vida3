@@ -1,0 +1,16 @@
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
+    if (document.body.hasAttribute('data-theme')) {
+        document.body.removeAttribute('data-theme');
+        themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        document.body.setAttribute('data-theme', 'dark');
+        themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+});
+
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('form-message').classList.remove('hidden');
+    e.target.reset();
+});
