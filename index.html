@@ -30,9 +30,6 @@
         .project-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
         .project-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
         .p-content { padding: 15px; }
-        .progress-container { margin-top: 10px; }
-        .bar { background: #eee; height: 8px; border-radius: 4px; overflow: hidden; margin-top: 5px; }
-        .progress { background: var(--primary); height: 100%; border-radius: 4px; }
         footer { padding: 30px; text-align: center; opacity: 0.6; font-size: 0.8rem; }
     </style>
 </head>
@@ -81,7 +78,6 @@
         const btn = document.getElementById('theme-toggle');
         const icon = btn.querySelector('i');
         
-        // Función corregida para celulares
         btn.onclick = function() {
             if (document.body.getAttribute('data-theme') === 'dark') {
                 document.body.removeAttribute('data-theme');
