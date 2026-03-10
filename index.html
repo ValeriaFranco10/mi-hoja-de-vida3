@@ -37,3 +37,67 @@
     <header>
         <nav class="container">
             <div class="logo">VALERIA FRANCO</div>
+            <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="1.jpeg" alt="Valeria Franco" class="profile-img">
+            <h1>Valeria Franco</h1>
+            <p>10° Grado | Atleta de Voleibol | Aspirante a Bióloga</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="card">
+            <h2><i class="fas fa-user"></i> Sobre mí</h2>
+            <p>Soy una estudiante apasionada por el deporte y la ciencia. Mi enfoque se basa en la disciplina aprendida en la cancha de voleibol aplicada a mis metas académicas.</p>
+        </div>
+
+        <h2><i class="fas fa-trophy"></i> Logros Destacados</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <img src="2.jpg" alt="Voleibol">
+                <div class="p-content">
+                    <h3>Voleibol</h3>
+                    <p>Liderazgo y trabajo en equipo en torneos regionales.</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="3.jpg" alt="Académico">
+                <div class="p-content">
+                    <h3>Académico</h3>
+                    <p>Excelencia en proyectos de investigación biológica.</p>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="4.jpg" alt="Futuro">
+                <div class="p-content">
+                    <h3>Futuro</h3>
+                    <p>Preparación para certificaciones internacionales.</p>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>&copy; 2024 Valeria Franco. Todos los derechos reservados.</footer>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        const icon = btn.querySelector('i');
+        
+        btn.onclick = function() {
+            if (document.body.getAttribute('data-theme') === 'dark') {
+                document.body.removeAttribute('data-theme');
+                icon.className = 'fas fa-moon';
+            } else {
+                document.body.setAttribute('data-theme', 'dark');
+                icon.className = 'fas fa-sun';
+            }
+        };
+    </script>
+</body>
+</html>
