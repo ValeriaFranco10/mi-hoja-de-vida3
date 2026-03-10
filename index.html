@@ -2,41 +2,124 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Valeria Franco | Portafolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valeria Franco | Portafolio Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
+        /* DISEÑO PÚRPURA PROFESIONAL */
         :root {
-            --bg: #f8f7ff; --text: #2d3436; --primary: #6c5ce7; 
-            --primary-dark: #4834d4; --card-bg: #ffffff;
+            --bg: #f8f7ff;
+            --text: #2d3436;
+            --primary: #6c5ce7; /* Púrpura principal */
+            --primary-dark: #4834d4;
+            --accent: #a29bfe;
+            --card-bg: #ffffff;
+            --white: #ffffff;
         }
+
         [data-theme="dark"] {
-            --bg: #1a1a2e; --text: #fdfcff; --primary: #a29bfe; --card-bg: #16213e;
+            --bg: #1a1a2e;
+            --text: #e1e1e1;
+            --primary: #a29bfe;
+            --card-bg: #16213e;
+            --white: #0f3460;
         }
-        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-        body { background-color: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; transition: 0.4s; overflow-x: hidden; }
-        .container { width: 92%; max-width: 800px; margin: auto; }
-        header { padding: 15px 0; background: var(--card-bg); box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            transition: 0.3s;
+            line-height: 1.6;
+        }
+
+        .container { width: 90%; max-width: 1000px; margin: auto; }
+
+        /* HEADER */
+        header { padding: 20px 0; background: var(--card-bg); box-shadow: 0 2px 10px rgba(0,0,0,0.1); sticky top: 0; z-index: 100; }
         nav { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 700; color: var(--primary); font-size: 1.2rem; }
-        .theme-btn { background: var(--primary); color: white; border: none; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; }
-        .hero { text-align: center; padding: 50px 0 80px 0; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: white; clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); margin-bottom: 20px; }
-        .profile-img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid rgba(255,255,255,0.4); object-fit: cover; margin-bottom: 15px; }
-        .card { background: var(--card-bg); padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; }
-        h2 { color: var(--primary); margin-bottom: 15px; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
-        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-        .project-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-        .project-card img { width: 100%; height: 250px; object-fit: cover; display: block; }
-        .p-content { padding: 15px; }
-        footer { padding: 30px; text-align: center; opacity: 0.6; font-size: 0.8rem; }
+        .logo { font-weight: 700; font-size: 1.5rem; color: var(--primary); }
+        
+        .theme-btn {
+            background: var(--primary); color: white; border: none;
+            width: 40px; height: 40px; border-radius: 50%; cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center; padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 160px; height: 160px; border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            object-fit: cover; margin-bottom: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 5px; }
+        .tagline { font-weight: 300; opacity: 0.9; }
+
+        /* SECCIONES */
+        .section-padding { padding: 30px 0; }
+        h2 { color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+
+        .card {
+            background: var(--card-bg); padding: 25px;
+            border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* HABILIDADES */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .skill-item { margin-bottom: 15px; }
+        .bar { background: #eee; height: 10px; border-radius: 5px; margin-top: 8px; overflow: hidden; }
+        .progress { background: var(--primary); height: 100%; border-radius: 5px; transition: 1s; }
+
+        /* PROYECTOS */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .project-card {
+            background: var(--card-bg); border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .project-card:hover { transform: translateY(-10px); }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; }
+        .p-content { padding: 20px; }
+        .p-content h3 { color: var(--primary); margin-bottom: 10px; }
+
+        /* CONTACTO */
+        .contact-flex { display: flex; gap: 30px; flex-wrap: wrap; }
+        form { flex: 2; display: flex; flex-direction: column; gap: 10px; min-width: 300px; }
+        input, textarea {
+            padding: 12px; border-radius: 8px; border: 1px solid var(--accent);
+            background: var(--bg); color: var(--text); font-family: inherit;
+        }
+        .btn-primary {
+            background: var(--primary); color: white; border: none;
+            padding: 15px; border-radius: 8px; font-weight: 600; cursor: pointer;
+        }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .socials { flex: 1; min-width: 200px; }
+
+        footer { text-align: center; padding: 40px; font-size: 0.9rem; opacity: 0.7; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <nav class="container">
-            <div class="logo">VALERIA FRANCO</div>
+            <div class="logo">VF</div>
             <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
         </nav>
     </header>
@@ -45,59 +128,108 @@
         <div class="container">
             <img src="1.jpeg" alt="Valeria Franco" class="profile-img">
             <h1>Valeria Franco</h1>
-            <p>10° Grado | Atleta de Voleibol | Aspirante a Bióloga</p>
+            <p class="tagline">Estudiante de 10° grado | Atleta de Voleibol | Futura Bióloga</p>
         </div>
     </section>
 
     <main class="container">
-        <div class="card">
-            <h2><i class="fas fa-user"></i> Sobre mí</h2>
-            <p>Soy una estudiante apasionada por el deporte y la ciencia. Mi enfoque se basa en la disciplina aprendida en la cancha de voleibol aplicada a mis metas académicas.</p>
-        </div>
+        
+        <section class="section-padding">
+            <h2><i class="fas fa-user-circle"></i> Sobre mí</h2>
+            <div class="card">
+                <p>Soy una estudiante de décimo grado apasionada por el <strong>voleibol</strong> y la <strong>biología</strong>. Me destaco por mi rapidez, constancia y gran memoria retentiva. Mi meta es aprender idiomas y entrar a la universidad para seguir impactando positivamente mi entorno.</p>
+            </div>
+        </section>
 
-        <h2><i class="fas fa-trophy"></i> Logros Destacados</h2>
-        <div class="projects-grid">
-            <article class="project-card">
-                <img src="2.jpg" alt="Voleibol">
-                <div class="p-content">
-                    <h3>Voleibol</h3>
-                    <p>Liderazgo y trabajo en equipo en torneos regionales.</p>
+        <section class="section-padding">
+            <h2><i class="fas fa-bolt"></i> Mis Habilidades</h2>
+            <div class="skills-grid card">
+                <div class="skill-item">
+                    <span>Voleibol (Rapidez)</span>
+                    <div class="bar"><div class="progress" style="width: 95%;"></div></div>
                 </div>
-            </article>
+                <div class="skill-item">
+                    <span>Biología</span>
+                    <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Retentiva</span>
+                    <div class="bar"><div class="progress" style="width: 98%;"></div></div>
+                </div>
+            </div>
+        </section>
 
-            <article class="project-card">
-                <img src="3.jpg" alt="Académico">
-                <div class="p-content">
-                    <h3>Académico</h3>
-                    <p>Excelencia en proyectos de investigación biológica.</p>
-                </div>
-            </article>
+        <section class="section-padding">
+            <h2><i class="fas fa-trophy"></i> Proyectos y Metas</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <img src="3.jpg" alt="Graduación">
+                    <div class="p-content">
+                        <h3>Graduación</h3>
+                        <p>Culminar el bachillerato con honores académicos.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="2.jpg" alt="Voleibol">
+                    <div class="p-content">
+                        <h3>Campeona</h3>
+                        <p>Disciplina, rapidez y liderazgo en el equipo de voley.</p>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <img src="4.jpg" alt="Idiomas">
+                    <div class="p-content">
+                        <h3>Idiomas</h3>
+                        <p>Preparación intensiva para un futuro académico global.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-            <article class="project-card">
-                <img src="4.jpg" alt="Futuro">
-                <div class="p-content">
-                    <h3>Futuro</h3>
-                    <p>Preparación para certificaciones internacionales.</p>
+        <section class="section-padding">
+            <h2><i class="fas fa-paper-plane"></i> Contacto</h2>
+            <div class="card contact-flex">
+                <form id="contact-form">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Correo" required>
+                    <textarea placeholder="¿En qué puedo ayudarte?" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+                <div class="socials">
+                    <p><strong>Tel:</strong> 312578 9563</p>
+                    <p><strong>Instagram:</strong> <a href="#" style="color:var(--primary)">@vale21</a></p>
+                    <p><strong>Ubicación:</strong> Colombia</p>
                 </div>
-            </article>
-        </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer>&copy; 2024 Valeria Franco. Todos los derechos reservados.</footer>
+    <footer>
+        <p>&copy; 2024 Valeria Franco. Hecho con código y pasión.</p>
+    </footer>
 
     <script>
+        // MODO OSCURO
         const btn = document.getElementById('theme-toggle');
         const icon = btn.querySelector('i');
         
-        btn.onclick = function() {
-            if (document.body.getAttribute('data-theme') === 'dark') {
+        btn.addEventListener('click', () => {
+            if (document.body.hasAttribute('data-theme')) {
                 document.body.removeAttribute('data-theme');
                 icon.className = 'fas fa-moon';
             } else {
                 document.body.setAttribute('data-theme', 'dark');
                 icon.className = 'fas fa-sun';
             }
-        };
+        });
+
+        // FORMULARIO
+        document.getElementById('contact-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Gracias por contactarme, Valeria recibirá tu mensaje!');
+            e.target.reset();
+        });
     </script>
 </body>
 </html>
