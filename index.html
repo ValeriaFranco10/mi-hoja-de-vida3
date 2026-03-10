@@ -2,67 +2,6 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valeria Franco | Portafolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root { --bg: #f8f7ff; --text: #2d3436; --primary: #6c5ce7; --card: #ffffff; }
-        [data-theme="dark"] { --bg: #1a1a2e; --text: #fdfcff; --primary: #a29bfe; --card: #16213e; }
-        body { background: var(--bg); color: var(--text); font-family: 'Poppins', sans-serif; transition: 0.3s; margin: 0; }
-        .container { width: 90%; margin: auto; padding: 20px 0; }
-        .hero { background: var(--primary); color: white; text-align: center; padding: 40px 20px; border-radius: 0 0 30px 30px; }
-        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 4px solid white; object-fit: cover; }
-        .card { background: var(--card); padding: 20px; border-radius: 15px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .project-img { width: 100%; height: 200px; object-fit: cover; border-radius: 10px; }
-        .theme-btn { position: fixed; top: 15px; right: 15px; background: white; border: none; padding: 10px; border-radius: 50%; cursor: pointer; z-index: 100; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        h2 { color: var(--primary); }
-    </style>
-</head>
-<body>
-    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
-    <header class="hero">
-        <img src="1.jpeg" class="profile-img">
-        <h1>Valeria Franco</h1>
-        <p>Estudiante | Atleta | Futura Bióloga</p>
-    </header>
-    <main class="container">
-        <div class="card">
-            <h2>Sobre mí</h2>
-            <p>Soy apasionada por el voleibol y la biología. Destaco por mi rapidez y memoria retentiva.</p>
-        </div>
-        <h2>Metas</h2>
-        <div class="card">
-            <img src="2.png" class="project-img">
-            <h3>Voleibol</h3>
-        </div>
-        <div class="card">
-            <img src="3.png" class="project-img">
-            <h3>Graduación</h3>
-        </div>
-        <div class="card">
-            <img src="4.png" class="project-img">
-            <h3>Idiomas</h3>
-        </div>
-    </main>
-    <script>
-        const btn = document.getElementById('theme-toggle');
-        btn.onclick = () => {
-            const theme = document.body.getAttribute('data-theme');
-            if (theme === 'dark') {
-                document.body.removeAttribute('data-theme');
-                btn.innerHTML = '<i class="fas fa-moon"></i>';
-            } else {
-                document.body.setAttribute('data-theme', 'dark');
-                btn.innerHTML = '<i class="fas fa-sun"></i>';
-            }
-        };
-    </script>
-</body>
-</html><hoja de vida html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Valeria Franco | Portafolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -155,4 +94,3 @@
     </script>
 </body>
 </html>
-
