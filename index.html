@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valeria Franco | Portafolio</title>
+    <title>Valeria Franco | Portafolio Profesional</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -17,32 +18,37 @@
 
     <main>
         <section class="hero">
-            <div class="container">
+            <div class="container hero-layout">
                 <img src="1.jpeg" alt="Valeria Franco" class="profile-img">
-                <h1>Valeria Franco</h1>
-                <p class="tagline">Estudiante de 10° grado | Atleta de Voleibol | Futura Bióloga</p>
+                <div class="hero-text">
+                    <h1>Valeria Franco</h1>
+                    <p class="tagline">Estudiante de 10° grado | Atleta de Voleibol | Futura Bióloga</p>
+                </div>
             </div>
         </section>
 
         <section class="container section-padding">
-            <h2>Sobre mí</h2>
+            <h2><i class="fas fa-user"></i> Sobre mí</h2>
             <div class="card">
-                <p>Soy una estudiante de décimo grado apasionada por el <strong>voleibol</strong> y la <strong>biología</strong>. Me destaco por mi rapidez, constancia y gran memoria. Mi meta es aprender idiomas y entrar a la universidad.</p>
+                <p>Soy una estudiante de décimo grado apasionada por el <strong>voleibol</strong> y la <strong>biología</strong>. Me destaco por mi rapidez, constancia y gran memoria retentiva. Mi meta es aprender idiomas y entrar a la universidad para seguir impactando positivamente mi entorno.</p>
             </div>
         </section>
 
         <section class="container section-padding">
-            <h2>Habilidades</h2>
+            <h2><i class="fas fa-star"></i> Mis Habilidades</h2>
             <div class="skills-grid">
                 <div class="skill-card">
+                    <i class="fas fa-volleyball-ball skill-icon"></i>
                     <span>Voleibol (Rapidez)</span>
                     <div class="bar"><div class="progress" style="width: 95%;"></div></div>
                 </div>
                 <div class="skill-card">
+                    <i class="fas fa-microscope skill-icon"></i>
                     <span>Biología</span>
                     <div class="bar"><div class="progress" style="width: 90%;"></div></div>
                 </div>
                 <div class="skill-card">
+                    <i class="fas fa-brain skill-icon"></i>
                     <span>Retentiva</span>
                     <div class="bar"><div class="progress" style="width: 98%;"></div></div>
                 </div>
@@ -50,43 +56,55 @@
         </section>
 
         <section class="container section-padding">
-            <h2>Proyectos y Metas</h2>
+            <h2><i class="fas fa-trophy"></i> Proyectos y Metas</h2>
             <div class="projects-grid">
                 <article class="project-card">
                     <img src="3.png" alt="Graduación">
-                    <div class="p-content"><h3>Graduación</h3><p>Culminar el bachillerato con honores.</p></div>
+                    <div class="p-content">
+                        <h3>Graduación</h3>
+                        <p>Culminar el bachillerato con honores académicos.</p>
+                    </div>
                 </article>
                 <article class="project-card">
                     <img src="2.png" alt="Voleibol">
-                    <div class="p-content"><h3>Campeona</h3><p>Disciplina y liderazgo en el equipo.</p></div>
+                    <div class="p-content">
+                        <h3>Campeona</h3>
+                        <p>Disciplina, rapidez y liderazgo en el equipo de voley.</p>
+                    </div>
                 </article>
                 <article class="project-card">
                     <img src="4.png" alt="Idiomas">
-                    <div class="p-content"><h3>Idiomas</h3><p>Preparación para un futuro global.</p></div>
+                    <div class="p-content">
+                        <h3>Idiomas</h3>
+                        <p>Preparación intensiva para un futuro académico global.</p>
+                    </div>
                 </article>
             </div>
         </section>
 
         <section class="container section-padding">
-            <h2>Contacto</h2>
-            <div class="contact-flex">
+            <h2><i class="fas fa-envelope"></i> Contacto</h2>
+            <div class="contact-flex card">
                 <form id="contact-form">
                     <input type="text" placeholder="Tu Nombre" required>
                     <input type="email" placeholder="Tu Correo" required>
                     <textarea placeholder="Tu Mensaje" rows="4" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar</button>
-                    <p id="form-message" class="hidden">¡Gracias por contactarme!</p>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    <p id="form-message" class="hidden">¡Gracias por contactarme, Valeria!</p>
                 </form>
                 <div class="socials">
                     <p><strong>Tel:</strong> 312578 9563</p>
-                    <p><strong>Instagram:</strong> @vale21</p>
+                    <p><strong>Instagram:</strong> <a href="https://instagram.com/vale21" target="_blank">@vale21</a></p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer><p>&copy; 2024 Valeria Franco</p></footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Valeria Franco. Hecho con código y pasión.</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
-
